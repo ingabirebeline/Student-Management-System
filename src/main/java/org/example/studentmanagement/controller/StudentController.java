@@ -52,6 +52,7 @@ public class StudentController {
             model.addAttribute("error", e.getMessage());
             return "register";
         } catch (IllegalStateException e) {
+            System.out.println("DB ERROR: " + e.getMessage());
             model.addAttribute("error", "Something went wrong. Please try again.");
             return "register";
         }
